@@ -2,7 +2,6 @@ package sipuni
 
 import (
 	"encoding/json"
-	"fmt"
 	"strconv"
 )
 
@@ -33,7 +32,7 @@ func (s *AutocallService) AddNumber(again int, number string, autocallID int) (A
 	}
 	var respData AutoCallAddResponse
 	resp, err := s.client.sendRequest(req)
-	fmt.Println(string(resp))
+	// fmt.Println(string(resp))
 	if err != nil {
 		return respData, err
 	}
